@@ -1,0 +1,72 @@
+.containers{
+    padding-top: 30px;
+    background-color: #db782c;
+    width: 100%;
+    height: 740px;
+}
+.registerParent h1{
+    padding-top: 40px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 800;
+    color: #ffff;
+}
+
+.registerParent{
+    margin: auto;
+    width: 400px;
+    height: 400px;
+    margin-top: 60px;
+    text-align: center;
+    background-color:#0d0d0c;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+
+.registerForm > input{
+    width: 95%;
+    height: 50px;
+    margin-top: 10px;
+    border: none;
+    outline: none;
+    border-bottom: 3px solid #ffff;
+    background: transparent;
+    color: #ffff;
+}
+
+.registerForm button{
+    width: 98%;
+    height: 40px;
+    background-color: coral;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 10px;
+}
+
+.registerParent .loginBtn{
+    float: right;
+}
+
+input::placeholder{
+    color:red;
+    opacity: 1;
+    text-transform: capitalize;
+}
+
+.registerParent span{
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+font-weight: 600;
+background-color: #ffff;
+}
+
+#error-rigister{
+    color: red;
+}
+
+
+@media(max-width:400px){
+    .registerParent{
+        width: 350px;
+    }
+}

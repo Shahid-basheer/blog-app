@@ -1,0 +1,12 @@
+.single{
+    width: 75%;
+    margin: auto;
+}
+
+
+
+@media (max-width:800px) {
+    .single{
+        width: 95%;
+    }
+}

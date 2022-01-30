@@ -1,0 +1,88 @@
+
+#container{
+    width: 100%;
+    height: 1000px;
+    background-color:#c2a49b;
+}
+.write{
+    padding-top: 16px;
+    margin-left: 15%;
+    margin-top: 53px;
+}
+
+.writeImg{
+     width: 80%;
+    height: 400px;
+    border-radius: 20px;
+}
+
+
+.writeIcon{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 1px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: gray;
+    cursor: pointer;
+}
+
+.writeInput{
+    font-size: 20px;
+    border: none;
+    padding: 20px;
+    width: 80%;
+    outline: none;
+    resize: none;
+    background-color: transparent;
+}
+
+.writeForm button{
+    width: 40%;
+    height: 49px;
+    padding: 2px;
+    border-radius: 10px;
+    background-color: black;
+    outline: none;
+    border: none;
+    margin-left: 20%;
+    margin-top: 68px;
+}
+
+.writeForm button span{
+    position: relative;
+    left: -1%;
+    top: -32px;
+    color: #fff;
+}
+.progress-btn{
+	width: 0%;
+	height: 45px;
+    transition: 0.9s;
+	background: green;
+    border-radius: 10px;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 700;
+   
+}
+
+@media (max-width:503px) {
+    .writeForm button{
+    margin-left: 0;
+    width: 100%;
+    }
+
+    .write{
+        margin-left: 0;
+        padding: 30px;
+        padding-bottom: 30px;
+    }
+
+    .writeImg{
+        width: 100%;
+    }
+}
+

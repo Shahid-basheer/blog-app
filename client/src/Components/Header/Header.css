@@ -1,0 +1,32 @@
+.header{
+    margin-top: 60px;
+}
+
+.headerTitle{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: black;
+}
+.headerTitleSm{
+    font-size: 22px;
+    font-family: 'Tourney', cursive;
+    font-family: 'Zen Tokyo Zoo', cursive;
+    color: rgb(12, 11, 11);
+}
+
+.headerTitleLg{
+    position: absolute;
+    top: 150px;
+    font-size: 82px;
+    font-family: 'Otomanopee One', sans-serif;
+    font-family: 'Tourney', cursive;
+    font-family: 'Zen Tokyo Zoo', cursive;
+}
+
+.headerImg {
+    width: 100%;
+    height: 450px;
+    margin-top: 10px;
+    object-fit: cover;
+  }

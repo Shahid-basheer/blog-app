@@ -1,0 +1,147 @@
+#loading-div-single-post{
+    width: 100%;
+    height: 100vh;
+    background-color:black;
+    position: absolute;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto;
+}
+
+
+
+.singlePost{
+    margin-top: 60px;
+    width: 100%;
+    height: 800px;
+}
+
+.singlePostWrapper{
+    width: 100%;
+}
+
+.singlePostImg{
+    width: 100%;
+    height: 400px;
+    border-radius: 9px;
+}
+
+.singlePostTitle{
+    text-align: center;
+    margin: 10px;
+    font-family: cursive;
+    font-weight: 500;
+    color: black;
+    font-size: 20px;
+    overflow: auto;
+    text-transform: capitalize;
+}
+
+.singlePostEdit{
+    float: right;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+
+#follow-btn{
+float: right;
+border: none;
+outline: none;
+background-color: cornflowerblue;
+border-radius: 10px;
+margin-right: 20px;
+width: 90px;
+height: 40px;
+font-family: Georgia, 'Times New Roman', Times, serif;
+font-weight: 600;
+}
+
+#follow-btn:hover{
+background-color: skyblue;
+}
+
+
+.singlePostIcon{
+    margin: 5px;
+}
+
+.singlePostIcon:first-child{
+    color: teal;
+}
+
+.singlePostIcon:last-child{
+    color: tomato;
+}
+
+.singlePostInfo{
+    margin-bottom: 20px;
+}
+
+.singlePostDes{
+    color: gray;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 22px;
+    overflow: auto;
+}
+
+.singlePostDes::first-letter{
+    margin-left: 20px;
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.singlePostDate{
+    float: right;
+}
+
+.updateModeTitle{
+    width: 100%;
+    outline: none;
+    border: none;
+    text-align: center;
+    margin-top: 10px;
+    font-family: cursive;
+}
+
+.updateModeDesc{
+    width: 100%;
+    border: none;
+    outline: none;
+    overflow: auto;
+    margin-top: 10px;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 22px;
+    resize: none;
+}
+
+
+.updateBtn{
+    width: 100%;
+    background-color: cornflowerblue;
+    height: 40px;
+    margin-top: 50px;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+}
+
+.updateBtn:hover{
+    background-color: rgb(115, 157, 236);
+}
+
+@media (max-width:500px) {
+    .singlePostDate{
+        display: none;
+    }
+
+    .singlePostImg{
+        height: 300px;
+    }
+}
