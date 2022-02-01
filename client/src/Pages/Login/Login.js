@@ -19,7 +19,6 @@ const Login = () => {
                 email: emailRef.current.value,
                 password: passwordRef.current.value
             })
-            console.log(res.data)
             localStorage.setItem('token', res.data.token)
             dispatch({ type: "LOGIN_SUCCESS", payload: res.data });
             

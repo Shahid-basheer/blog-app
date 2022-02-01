@@ -1,6 +1,7 @@
 import './Register.css'
 //import { Link } from 'react-router-dom'
 import {useState,useRef} from 'react'
+import {useHistory} from 'react-router-dom'
 import axios from 'axios'
 
 
@@ -9,7 +10,7 @@ const uname = useRef()
 const email = useRef()
 const pass = useRef()
 const [error,setError] = useState('')
-
+const history = useHistory()
 
 
 const handleSubmit = async(e)=>{
@@ -23,7 +24,7 @@ const data = {
 
 axios.post('/register',data).then((res)=>{
     console.log(res.data)
-window.location.replace('/login')
+history.push('/login')
 }).catch((e)=>{
 setError(e.response.data)
 })
