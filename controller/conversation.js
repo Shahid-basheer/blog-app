@@ -31,11 +31,9 @@ getConversation:async(req,res)=>{
     try{
         const data = await conversation.find({members:{$in:[req.params.userId]}})
         
-             console.log(data);
         data.map((v)=>{
             mem.push({_id:v._id,members_1:v.members[0],members_2:v.members[1]});
         })
-        console.log(mem);
      res.status(200).json(mem)
     }catch(e){
         console.log(e)

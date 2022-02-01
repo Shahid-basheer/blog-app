@@ -9,12 +9,16 @@
 
 .topbar #username{
     position: absolute;
-    right: 15%;
+    right: 9%;
     top: 20px;
     color: #fff;
     text-transform: uppercase;
     font-family: 'Courier New', Courier, monospace;
     cursor: text;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 100px;
 }
 
 .topbar #daily-blog{

@@ -24,19 +24,19 @@ const Post = () => {
   }, []);
 
   const interval = setInterval(() => {
-    if (posts) {
+    if (posts.length!==0) {
       setLoading(false);
       clearInterval(interval);
-    } else {
-      setLoading(true);
     }
   }, 1000);
 
+  
   const getPosts = () => {
     axios.get("/posts").then((res) => {
       setPosts(res.data);
     });
   };
+
 
   const getAllUsers = () => {
     axios.get("/getAllUsers/22").then((res) => {
@@ -47,6 +47,7 @@ const Post = () => {
   const getCurrentUser = () => {
     axios.get("/getUser/" + user?.userD._id).then((res) => {
       setCurrentUser(res.data);
+      console.log(res.data)
     });
   };
 
@@ -88,6 +89,7 @@ const Post = () => {
         status = false;
       }
     }
+
     return (
       <>
         <button
@@ -113,6 +115,7 @@ const Post = () => {
   const handlelogout = (e) => {
     dispatch({ type: "LOGOUT" });
   };
+
 
   return (
     <>
@@ -160,12 +163,12 @@ const Post = () => {
                 <span>About</span>
               </div>
             </Link>
-            <Link to="/chat" className="link">
-              <div>
+           
+              <div className="menu-bar-color" onClick={colorChange}>
                 <i className="fas fa-comments text-warning"></i>
                 <span>Chat</span>
               </div>
-            </Link>
+            
 
             <div className="menu-bar-color" onClick={colorChange}>
               <i className="fas fa-users text-danger"></i>
@@ -205,7 +208,10 @@ const Post = () => {
                     )}
                     <div className="postInfo bg-light">
                       <Link to={`/posts/${data._id}`} className="link">
+                        <div id='postTitle'>
                         <span className="postTitle">{data.title}</span>
+
+                        </div>
                       </Link>
                       <hr id="postTitle-hr" />
                       <span className="postDate">{format(data.createdAt)}</span>
@@ -243,13 +249,6 @@ const Post = () => {
                         currentUser[0] ? currentUser[0] : null,
                         users._id
                       )}
-                      <button
-                        id="btn-message"
-                        onClick={() =>
-                          user ? history.push(`/chat/${users._id}`) : history.push("/login")
-                        }>
-                        Message
-                      </button>
                     </div>
                   ) : null}
                 </tr>

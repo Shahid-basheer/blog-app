@@ -14,7 +14,6 @@ import Home from './Pages/Home/Home'
 import Footer from './Components/Footer/Footer'
 import Following from './Pages/Following/Following'
 import Profile from './Pages/Profile/Profile'
-import Messanger from './Components/Messanger/Messanger'
  const App = () => {
 const {user} = useContext(Context)
 
@@ -32,7 +31,6 @@ const {user} = useContext(Context)
       <Route path='/followers' component={user?Followers:Login}/>
       <Route path='/following' component={user?Following:Login}/>
       <Route path='/profile' component={Profile}/>
-      <Route path='/chat' component={user?Messanger:Login}/>
       </Switch>
       <Footer/>
     </>

@@ -32,6 +32,7 @@ router.post('/addMessage',message.addMessage)
 router.get('/getMessage/:id',message.getMessage)
 router.get('/getUser/:userId',message.getUser)
 router.get("/getAllUsers/:id",user.getAllUsers);
+router.get("/chat/:id",()=>{});
 
 
 module.exports = router;

@@ -64,7 +64,7 @@ const interval = setInterval(() => {
 // follow our follower
   const follow = (userD, postUserId) => {
     var status = false
-      for(var i=0;i<userD?.following.length;i++){
+      for(var i=0;i<userD?.following?.length;i++){
         console.log(i);
           if(userD.following[i]!==postUserId){
             status=false

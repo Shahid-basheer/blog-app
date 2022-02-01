@@ -8,7 +8,6 @@ const cors = require('cors')
 const userRouter = require('./router/user')
 const http = require("http")
 const server = http.createServer(app)
-const socket = require("socket.io-client")("http://localhost:3000");
 const io = require('socket.io')(server,
 {cors:{origin:'http://localhost:3000',
 method:['GET','POST']}})
@@ -38,7 +37,6 @@ socket.on('addUser',(userId)=>{
 
 
 
-
  socket.on("sendMessage", ({ userId, receiverId, text }) => {
    console.log('client send message into server');
     const user = getUser(receiverId);
@@ -51,9 +49,9 @@ socket.on('addUser',(userId)=>{
 
 
 
-socket.on("connect_error", (err) => {
-  console.log(`connect_error due to ${err.message}`);
-});
+// socket.on("connect_error", (err) => {
+//   console.log(`connect_error due to ${err.message}`);
+// });
 
 socket.on('disconnect',()=>{
   removeUser(socket.id)
@@ -67,8 +65,9 @@ app.use(morgan('dev'))
 app.use(cors())
 app.use(express.static(path.join(__dirname, "client", "build")));
 app.use('/',userRouter)
+
 app.use((req,res,next)=>{
-res.status(404).json('page not found')
+res.status(404).json('opps!! page not found')
 })
   
 if (process.env.NODE_ENV === "production") {

@@ -60,11 +60,7 @@ const Profile = () => {
             <p id="following-length">{state ? state.following.length : null}</p>
           </div>
 
-          <div>
-            <span id="post" onClick={()=>{
-              histroy.push(`/chat/${state._id}`)
-            }}>Message</span>
-          </div>
+         
           <div>
             <span id="followers">Followers</span>
             <p id="followers-length">{state ? state.followers.length : null}</p>

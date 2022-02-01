@@ -19,13 +19,27 @@
     margin-bottom: 40px;
 }
 
+#postTitle{
+    width: 200px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 600;
+    font-size: 20px;
+    color: black;
+    margin: 2px 0 0 5px;
+    text-transform: capitalize; 
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
 
 .postTitle{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-weight: 600;
+    font-size: 20px;
     color: black;
     margin: 2px 0 0 5px;
     text-transform: capitalize; 
+  
 }
 
 #postTitle-hr{
@@ -43,7 +57,10 @@
     font-weight: 100;
     font-size: 13px;
     text-transform: capitalize; 
-
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 500px;
 }
 
 .menu-bar{
@@ -82,7 +99,6 @@ cursor: pointer;
 .posts{
     width: 100%;
     height: auto;
-    background-color: rgb(46, 100, 100);
     border: 3px solid black;
     border-radius: 1px;
 }
@@ -90,7 +106,6 @@ cursor: pointer;
 .posts-post{
     width: 100%;
     height: auto;
-    background-color: darkgrey;
 }
 
 .posts-post img{
@@ -118,7 +133,7 @@ cursor: pointer;
     height: 100px;
 }
 .contact-loop-container{
-    width: 297px;
+    width: 287px;
     height:50px;
     background-color: turquoise;
     margin: 5px;
@@ -147,7 +162,8 @@ cursor: pointer;
 
 
 #btn-follow{
- float: right;
+ position: relative;
+ right: -64px;
  width: 80px;
  height: 30px;
  background-color: #fff;
@@ -155,13 +171,6 @@ cursor: pointer;
  margin: 2px;
 }
 
-#btn-message{
- float: right;
- width: 80px;
- height: 30px;
- background-color: red;
- border: 2px solid black;
-}
 
 .contact-loop-container button:nth-child(2){
     float: right;
@@ -176,7 +185,9 @@ cursor: pointer;
         display: none;
     }
 
-   
+    .postDes{
+        width: 90%;
+    }
     
 }
 

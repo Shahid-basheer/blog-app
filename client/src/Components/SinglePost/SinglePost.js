@@ -34,11 +34,9 @@ const SinglePost = () => {
 
   
 const interval = setInterval(() => {
-  if (post) {
-    setLoading(false);
+  if (post !=='' && title !==''&& desc!=='') {
     clearInterval(interval);
-  } else {
-    setLoading(true);
+    setLoading(false);
   }
 }, 1000);
 
@@ -205,7 +203,10 @@ const interval = setInterval(() => {
                 onChange={(e) => setDesc(e.target.value)}
               />
             ) : (
-              <p className="singlePostDes">{post.desc}</p>
+              <div id='post-desc'>
+                <p className="singlePostDes">{post.desc}</p>
+
+              </div>
             )}
             {updateMode && (
               <button className="updateBtn" onClick={HandleUpdate}>
